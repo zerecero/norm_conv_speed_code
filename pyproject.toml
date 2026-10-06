@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "blp-convergence"
+version = "0.2.0"
+description = "Symmetric outside-zero demand inversion for PyBLP."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "Miguel Zerecero"}]
+dependencies = ["numpy>=1.26,<3", "pyblp==1.2.0"]
+
+[project.optional-dependencies]
+examples = ["pandas>=2.2,<4"]
+test = ["pytest>=8,<10"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+

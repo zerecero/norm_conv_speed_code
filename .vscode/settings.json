@@ -1,0 +1,6 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv",
+  "python.REPL.sendToNativeREPL": true,
+  "python.testing.pytestEnabled": true,
+  "python.testing.pytestArgs": ["tests"]
+}
