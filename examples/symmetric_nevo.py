@@ -52,5 +52,15 @@ print(f"Maximum inside log-share residual: {max_log_share_residual:.3e}")
 if not results.converged or iterator.failures:
     raise RuntimeError("Review the optimizer/inner-loop diagnostics above.")
 
-# Post-estimation: results.beta, results.sigma, results.compute_elasticities(), ...
+# Post-estimation
+
+print("Mean coefficients:")
+print(results.beta)
+
+print("Random-coefficient parameters:")
+print(results.sigma)
+
+# Additional standard PyBLP calculations:
+# results.beta, results.sigma, results.beta_se, results.sigma_se, results.delta
+# results.compute_shares(), results.compute_elasticities(), ... work as usual.
 

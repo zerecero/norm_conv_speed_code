@@ -54,6 +54,16 @@ print(results)
 print(f"Optimizer converged: {results.converged}")
 print(f"Failed inner inversions: {iterator.failures}")
 print(f"Inner share evaluations: {iterator.total_share_evaluator_calls:,}")
+
+# Post-estimation
+
+print("Mean coefficients:")
+print(results.beta)
+
+print("Random-coefficient parameters:")
+print(results.sigma)
+
+# Additional standard PyBLP calculations:
 # results.beta, results.sigma, results.beta_se, results.sigma_se, results.delta
 # results.compute_shares(), results.compute_elasticities(), ... work as usual.
 
